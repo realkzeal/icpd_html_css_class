@@ -1,0 +1,22 @@
+.header,
+.footer {
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #eee;
+  padding: 20px;
+}
+
+.main {
+  width: 75%;
+  background-color: #ddd;
+  padding: 20px;
+}
