@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Basic Reset & Defaults */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    /* Smooth scrolling for anchor links */
+}
+
+body{
+    font-family: inter, poppins, Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.4;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    /* Center the content */
+    padding: 0 20px;
+    /* Add padding to the sides */
+}
+
+/* Header & Navigation */
+header {
+    background-color: #f4f4f4;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    /* Make header stick */
+    top: 0;
+    z-index: 10;
+    /* Ensure it abov other content */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    /* Pushes logo and nav links apart */
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    /* Space between nav items */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+    /* Highlight color on hover */
+}
+
+/* Hero Section */
+#hero {
+    background-color: #007bff;
+    color: white;
+    padding: 6rem 0;
+    /* Vertical Padding */
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+    color: #98b9dd;
+}
+
+/* Sections General Setting */
+section {
+    padding: 4rem 0;
+    /* Vertical padding for sections */
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+}
+
+/* About Section */
+#about p {
+    max-width: 800px;
+    /* Limit text width for readability */
+    margin: 0 auto 1rem auto;
+    /* Center text block */
+    text-align: center;
+}
+
+/* Projects Section */
+#projects{
+    background-color: #eee;
+    padding: 5rem 0;
+}
+.projects-grid {
+    display: grid;
+    /* create 3 equal columns, reduce on smaller screens */
+    grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    /* Space between grid item */
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 2px rgba(14, 1, 1, 0.5);
+    transition: transform 0.3 ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    /* Slight lift effect on hover */
+}
+
+.project-card h3 {
+    margin-bottom: 0.5rem;
+    color: #007bff;
+}
+
+.project-card p {
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 5px;
+    /* Add slight space between links */
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#contact p {
+    margin-bottom: 1rem
+}
+
+#contact a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+    /* Spacing for inline links */
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #ccc;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+/* Basic Responsiveness */
+@media screen and (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        margin-top: 1rem;
+        /* Add space when stacked */
+       padding-left: 0; 
+    }
+    header nav ul li {
+        margin: 0px 10px;
+        /* Adjust spacing for horizontal view */
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header nav ul {
+        flex-direction: column;
+        /* stack nav item vertically */
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+        /* vertical spacing */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        /* Single column on very small screen */
+    }
+
+    .container {
+        padding: 0 15px;
+        /* reduce side padding on small screens */
+    }
+}
